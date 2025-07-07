@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xml: vm="clr-namespace: Examen3progresoPugaDavid.ViewModels"
+             xmlns:vm="clr-namespace: Examen3progresoPugaDavid.ViewModels"
              x:Class="Examen3progresoPugaDavid.Views.AgregarProductoPage"
              Title="David Puga - 03/12/2004">
     <ContentPage.BindingContext>
         <vm:AgregarProductoViewModel/>
-        <ContentPage.BindingContext>
+        </ContentPage.BindingContext>
+
             <ScrollView>
                 <VerticalStackLayout Padding="20" Spacing="15">
                     <Label Text="Agregar nuevo producto"
@@ -25,10 +26,8 @@
                            Keyboard="Numeric"/>
 
                     <Button Text="Guardar Producto"
-                            Command="{Binding GuardarCommand}"/> 
+                            Command="{Binding GuardarCommand}"/>
 
                 </VerticalStackLayout>
             </ScrollView>
-
-        </ContentPage.BindingContext>
 </ContentPage>
