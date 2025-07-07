@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Examen3progresoPugaDavid.ViewModels"
+             x:Class="Examen3progresoPugaDavid.Views.ListaProductosPage"
+             Title="Productos Guardados">
+
+    <ContentPage.BindingContext>
+        <vm:ListaProductosViewModel/>
+    </ContentPage.BindingContext>
+
+    <CollectionView ItemsSource="{Binding Productos}">
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <Frame Margin="10" Padding="10" BackgroundColor="AliceBlue" CornerRadius="10">
+                    <VerticalStackLayout>
+                        <Label Text="{Binding Nombre}" FontAttributes="Bold" FontSize="18"/>
+                        <Label Text="{Binding Categoria}" FontAttributes="Italic" />
+                        <Label Text="{Binding Cantidad, StringFormat='Cantidad:{0}'}"/>
+                        <Label Text="{Binding Precio, StringFormat='Precio: {0:F2}'}"/>
+                    </VerticalStackLayout>
+                </Frame>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+    
+    
+    
+</ContentPage>
